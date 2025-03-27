@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+<body>
+    <%- include("partials/navbar.ejs") %>
+    
+    <div class="container mt-5">
+        <div class="card shadow-sm" id="formulario-pergunta">
+            <div class="card-header bg-primary text-white">
+                <h3>Adicionar Novo Produto</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/salvarproduto">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" id="nome" placeholder="Nome do produto" class="form-control" name="nome" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="descricao" class="form-label">Descrição:</label>
+                        <textarea id="descricao" placeholder="Descreva o produto" class="form-control" name="descricao" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="preco" class="form-label">Preço:</label>
+                        <input type="text" id="preco" placeholder="Preço do produto" class="form-control" name="preco" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="url" class="form-label">URL da Imagem:</label>
+                        <input type="text" id="url" placeholder="URL da imagem do produto" class="form-control" name="url" required>
+                    </div>
+
+                    <button class="btn btn-primary w-100 mt-3">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
+</body>

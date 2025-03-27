@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <%- include("partials/navbar.ejs") %>
+
+    <div class="container mt-5">
+        <hr>
+
+        <h1 class="text-center mb-4"><%= produto.nome %></h1>
+
+        <p class="lead text-center mb-4"><%= produto.descricao %></p>
+
+        <p class="h4 text-success text-center mb-4"><%= produto.preco %></p>
+
+        <div class="text-center">
+            <img src="<%= produto.url %>" alt="Imagem do produto" class="img-fluid rounded shadow">
+        </div>
+        
+    </div>
+
+    <%- include("partials/footer.ejs") %>
+</body>
